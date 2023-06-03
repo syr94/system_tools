@@ -1,9 +1,10 @@
 package com.app.worker;
 
-import com.app.model.BlockingQueue;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 public class WorkerThread extends Thread {
-
+    private static final Logger logger = LogManager.getLogger(WorkerThread.class);
     private final BlockingQueue queue;
 
     public WorkerThread(BlockingQueue queue) {
